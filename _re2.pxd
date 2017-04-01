@@ -77,12 +77,12 @@ cdef extern from "re2/re2.h" namespace "re2":
         bint one_line() const
         void set_one_line(bint)
 
-    cdef enum Anchor:
+    cdef enum Anchor "RE2::Anchor":
         UNANCHORED "RE2::UNANCHORED"
         ANCHOR_START "RE2::ANCHOR_START"
         ANCHOR_BOTH "RE2::ANCHOR_BOTH"
 
-    cdef enum ErrorCode:
+    cdef enum ErrorCode "RE2::ErrorCode":
         NoError "RE2::NoError"
         ErrorInternal "RE2::ErrorInternal"
         # Parse errors

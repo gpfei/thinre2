@@ -166,9 +166,5 @@ cdef class Result:
         del self.matches
 
     def groups(self):
-        matches = deref(self.matches)
-        return (
-            matches[i]
-            for i in range(matches.size())
-        )
-
+        for match in deref(self.matches):
+            yield match
